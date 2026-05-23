@@ -1,0 +1,1 @@
+execute if items entity @s contents cod run item replace entity @s contents with cooked_cod

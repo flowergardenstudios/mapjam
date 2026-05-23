@@ -1,8 +1,12 @@
 scoreboard players operation #ID submarine.ID = @s submarine.ID
+
+# // TELEPORT
+execute at @s anchored eyes positioned ^ ^ ^ run function game:submarine/teleport
+
 execute on passengers if entity @s[type=player] run scoreboard players operation @s submarine.ID = @n[predicate=game:id/submarine, tag=_submarine.root] submarine.ID
 
 # Check for Keystrokes.
-execute on passengers as @s[predicate=game:id/submarine, type=player] run function game:submarine/move/check
+execute as @p[predicate=game:id/submarine] run function game:submarine/move/check
 
 # Apply Drag
 execute if score @s submarine.Velocity matches 1.. run scoreboard players operation @s submarine.Velocity -= Drag submarine.BaseValues

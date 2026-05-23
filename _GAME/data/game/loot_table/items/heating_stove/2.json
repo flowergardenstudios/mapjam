@@ -1,0 +1,37 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:allay_spawn_egg",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:entity_data": {
+                  "id": "minecraft:marker",
+                  "Tags": [
+                    "_items.heating_stove.summon",
+                    "level_2"
+                  ]
+                },
+                "minecraft:item_name": "Heating Stove",
+                "minecraft:lore": [
+                  {
+                    "text": "heats food items.",
+                    "bold": false,
+                    "italic": false
+                  }
+                ]
+              },
+              "conditions": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "functions": []
+}

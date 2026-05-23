@@ -1,0 +1,1 @@
+$summon item ~ ~1 ~ {Item:$(item), Motion:[0.0d, 0.2d, 0.0d]}

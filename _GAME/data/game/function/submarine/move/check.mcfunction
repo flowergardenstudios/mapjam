@@ -9,10 +9,10 @@ execute if predicate game:input/a if predicate game:input/s as @n[tag=_submarine
 execute if predicate game:input/d if predicate game:input/s as @n[tag=_submarine.root, predicate=game:id/submarine] rotated as @s run rotate @s ~-2.3 0
 
 # Rotate Passengers
-execute if predicate game:input/a unless predicate game:input/s as @n[tag=_submarine.root, predicate=game:id/submarine] on passengers rotated as @s run rotate @s ~-2.3 ~
-execute if predicate game:input/d unless predicate game:input/s as @n[tag=_submarine.root, predicate=game:id/submarine] on passengers rotated as @s run rotate @s ~2.3 ~
-execute if predicate game:input/a if predicate game:input/s as @n[tag=_submarine.root, predicate=game:id/submarine] on passengers rotated as @s run rotate @s ~2.3 ~
-execute if predicate game:input/d if predicate game:input/s as @n[tag=_submarine.root, predicate=game:id/submarine] on passengers rotated as @s run rotate @s ~-2.3 ~
+execute if predicate game:input/a unless predicate game:input/s as @n[tag=_submarine.root, predicate=game:id/submarine] as @e[predicate=game:id/submarine, type=!mannequin] rotated as @s run rotate @s ~-2.3 ~
+execute if predicate game:input/d unless predicate game:input/s as @n[tag=_submarine.root, predicate=game:id/submarine] as @e[predicate=game:id/submarine, type=!mannequin] rotated as @s run rotate @s ~2.3 ~
+execute if predicate game:input/a if predicate game:input/s as @n[tag=_submarine.root, predicate=game:id/submarine] as @e[predicate=game:id/submarine, type=!mannequin] rotated as @s run rotate @s ~2.3 ~
+execute if predicate game:input/d if predicate game:input/s as @n[tag=_submarine.root, predicate=game:id/submarine] as @e[predicate=game:id/submarine, type=!mannequin] rotated as @s run rotate @s ~-2.3 ~
 
 
 # // Up and Down
