@@ -1,12 +1,10 @@
 # AS ITEMSPAWNER_MARKER
 # Delete First
 function game:items/spawner/delete_all
-
 tag @s remove _game.ItemSpawner.SpawnedItem
 scoreboard players set SubmarineSpawnedItems items.Values 0
 
 scoreboard players operation @s items.ID = .global items.ID
-
 summon item_display ~ ~ ~ {Tags:[_game.Item, _game.Item.new, _game.ItemSpawner.ItemDisplay]}
 summon interaction ~ ~ ~ {Tags:[_game.Item, _game.Item.new, _game.ItemSpawner.Interaction]}
 scoreboard players operation @e[tag=_game.Item.new] items.ID = .global items.ID
