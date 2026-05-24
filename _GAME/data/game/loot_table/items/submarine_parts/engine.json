@@ -1,0 +1,31 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:coal",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:item_name": "Old Engine",
+                "minecraft:lore": [
+                  {
+                    "text": "a Submarine Part.",
+                    "color": "gray",
+                    "bold": false,
+                    "italic": false
+                  }
+                ]
+              },
+              "conditions": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "functions": []
+}

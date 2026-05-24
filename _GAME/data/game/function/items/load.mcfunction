@@ -1,6 +1,9 @@
 scoreboard objectives add items.ID dummy
 scoreboard players add .global items.ID 1
+scoreboard players set #ID items.ID 0
 
+scoreboard objectives add items.Values dummy
+scoreboard players set SubmarinePartsCount items.Values 4
 
 scoreboard objectives add HeatingStoveCookTime dummy
 scoreboard players set Level_1 HeatingStoveCookTime 200
