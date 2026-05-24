@@ -4,7 +4,7 @@ summon minecraft:block_display ~ ~-0.05 ~ {Tags:[_items.heating_stove.new, "_ite
 summon marker ~ ~ ~ {Tags:[_items.heating_stove.new, _items.heating_stove]}
 summon item_display ~ ~0.4 ~ { Tags:[_items.heating_stove.new, _items.heating_stove.item_display], transformation: {left_rotation: [-0.7071068f, 0.0f, 0.0f, 0.7071068f], right_rotation: [0.0f, 0.0f, 0.0f, 1.0f], scale: [0.99999994f, 0.9999999f, 0.9999999f], translation: [0.0f, 0.0f, 0.0f]}}
 
-summon interaction ~ ~-0.5 ~ {width: 1.1f,response: true, Tags:[_items.heating_stove.new, _items.heating_stove.interaction]}
+summon interaction ~ ~-0.5 ~ {width: 1.1f, height: 1.1f, response: true, Tags:[_items.heating_stove.new, _items.heating_stove.interaction]}
 # summon text_display ~ ~1 ~ {view_range: 0.08f, Tags:[_items.heating_stove.new], alignment: "center", background: 0, billboard: "center", default_background: 0b, line_width: 200, see_through: 0b, shadow: 0b, text: "Cooker Status", text_opacity: 255}
 # summon text_display ~ ~0.75 ~ {view_range: 0.08f, Tags:[_items.heating_stove.new, _items.heating_stove.text_display], alignment: "center", background: 0, billboard: "center", default_background: 0b, line_width: 200, see_through: 0b, shadow: 0b, text: "EMPTY", text_opacity: 255}
 
