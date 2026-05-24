@@ -1,0 +1,4 @@
+{
+	"replace": false,
+	"values": ["animated_java:camera/root/on_tick", "animated_java:ld/root/on_tick"]
+}

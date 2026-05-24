@@ -1,0 +1,4 @@
+{
+	"replace": false,
+	"values": ["aj:camera/on_load", "aj:ld/on_load", "aj:os/on_load", "animated_java:camera/on_load", "animated_java:ld/on_load"]
+}

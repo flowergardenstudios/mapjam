@@ -1,4 +1,4 @@
 give @s allay_spawn_egg[entity_data={id:"marker", data:{name: "Game:PlayerSpawner"}, Tags:[_marker.PlayerSpawner]}, item_name="'Player Spawner'"]
 give @s allay_spawn_egg[entity_data={id:"marker", data:{name: "Game:CommonItemSpawner"}, Tags:[_marker.ItemSpawner]}, item_name="'Common Item Spawner'"]
 give @s allay_spawn_egg[entity_data={id:"marker", data:{name: "Game:RareItemSpawner"}, Tags:[_marker.ItemSpawner]}, item_name="'Rare Item Spawner'"]
-give @s allay_spawn_egg[entity_data={id:"marker", data:{name: "Game:SubmarinePartSpawner"}, Tags:[_marker.ItemSpawner]}, item_name="'Submarine Part Spawner'"]
+give @s allay_spawn_egg[entity_data={id:"marker", data:{name: "Game:SubmarinePartSpawner"}, Tags:[_marker.SubmarinePartSpawner,_marker.ItemSpawner]}, item_name="'Submarine Part Spawner'"]

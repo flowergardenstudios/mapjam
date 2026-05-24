@@ -1,5 +1,6 @@
 {
      "values": [
-          "game:global/tick"
+          "game:global/tick",
+          "game:doors/tick"
      ]
 }

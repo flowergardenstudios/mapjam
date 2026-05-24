@@ -1,0 +1,1 @@
+tag @n[type=marker, predicate=game:id/items] add _marker.SubmarinePartSpawner

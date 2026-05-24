@@ -12,7 +12,7 @@ function animated_java:global/data_manager/read with storage animated_java:temp 
 data modify storage animated_java:temp entry.data.uuids append from storage animated_java:gu out
 data modify storage animated_java:temp entry.data.root_uuid set from storage animated_java:gu out
 data modify storage animated_java:temp entry.data.blueprint_id set value "aj:ld"
-data modify storage animated_java:temp entry.data.rig_hash set value "5545b2d94473e7e56ed9c619e4714bd214df5141c90caaeb78ed2f46072d6d71"
+data modify storage animated_java:temp entry.data.rig_hash set value "3f245d8810b0b656e9bf7d5f9a9043569f664ccaa01a99b4f454b15cf4d2be9d"
 tp @s ~ ~ ~ ~ ~
 execute on passengers if entity @s[tag=aj.ld.node.bone1] run function aj:ld/zzz/summon/as_node/bone1
 data modify storage animated_java:temp entry.data.uuids append from storage animated_java:gu out
@@ -40,6 +40,7 @@ execute on passengers run rotate @s ~ ~
 data modify entity @s teleport_duration set value 1
 execute on passengers run data modify entity @s teleport_duration set value 1
 execute on passengers if entity @s[tag=aj.ld.node.water] run function aj:ld/zzz/summon/on_summon/block_display_water
+execute at @s run function aj:ld/zzz/summon/on_summon/rig
 tag @s remove aj.new
 execute on passengers run tag @s remove aj.new
 execute on passengers run ride @s dismount

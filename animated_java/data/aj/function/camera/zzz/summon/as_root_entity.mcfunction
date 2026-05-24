@@ -12,13 +12,16 @@ function animated_java:global/data_manager/read with storage animated_java:temp 
 data modify storage animated_java:temp entry.data.uuids append from storage animated_java:gu out
 data modify storage animated_java:temp entry.data.root_uuid set from storage animated_java:gu out
 data modify storage animated_java:temp entry.data.blueprint_id set value "aj:camera"
-data modify storage animated_java:temp entry.data.rig_hash set value "d9b2464495cb6e87c2bf3aa12c1ee1185f2949a2620c128e1c2a65beafa52bcc"
+data modify storage animated_java:temp entry.data.rig_hash set value "e82b65bb3efc4d5cbc1b4ad828be8b37911636bb3364cded6c0c9a1c0b7441c3"
 tp @s ~ ~ ~ ~ ~
 summon minecraft:item_display ^0 ^0 ^0 {Tags:["","aj.camera.camera","aj.camera.camera.camera","aj.camera.entity","aj.camera.node","aj.camera.node.camera","aj.global.camera","aj.global.entity","aj.global.node","aj.global.node.camera","aj.global.root.child","aj.global.root.child.camera","aj.new"], teleport_duration: 2}
 execute as @n[ type=minecraft:item_display, tag=aj.camera.camera.camera, tag=aj.new, distance=..3 ] run function aj:camera/zzz/summon/as_camera/camera
 data modify storage animated_java:temp entry.data.uuids append from storage animated_java:gu out
 data modify storage animated_java:temp entry.data.uuids_by_name.camera set from storage animated_java:gu out
 data modify storage animated_java:temp entry.data.cameras.camera.uuid set from storage animated_java:gu out
+execute on passengers if entity @s[tag=aj.camera.node.item_display] run function aj:camera/zzz/summon/as_node/item_display
+data modify storage animated_java:temp entry.data.uuids append from storage animated_java:gu out
+data modify storage animated_java:temp entry.data.uuids_by_name.item_display set from storage animated_java:gu out
 function aj:camera/zzz/set_default_pose
 # Data Manager: Write
 function animated_java:global/data_manager/write with storage animated_java:temp args
@@ -30,6 +33,7 @@ function aj:camera/root/on_tick/transform_floating_entities
 execute on passengers run rotate @s ~ ~
 data modify entity @s teleport_duration set value 1
 execute on passengers run data modify entity @s teleport_duration set value 1
+execute on passengers if entity @s[tag=aj.camera.node.item_display] run function aj:camera/zzz/summon/on_summon/item_display_item_display
 execute at @s run function aj:camera/zzz/summon/on_summon/rig
 tag @s remove aj.new
 execute on passengers run tag @s remove aj.new

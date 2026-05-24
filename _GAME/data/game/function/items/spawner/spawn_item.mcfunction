@@ -2,6 +2,7 @@
 # Delete First
 function game:items/spawner/delete_all
 tag @s remove _game.ItemSpawner.SpawnedItem
+tag @s remove spawnedItem
 scoreboard players set SubmarineSpawnedItems items.Values 0
 
 scoreboard players operation @s items.ID = .global items.ID
@@ -15,14 +16,14 @@ scoreboard players add .global items.ID 1
 # // Item Display Random Rotation
 data remove storage game:storage _arguments
 execute store result storage game:storage _arguments.X float 0.001 run random value -360000..360000
-execute store result storage game:storage _arguments.Y int 1 run random value 0..2
-execute if data storage game:storage _arguments{Y: 0} run data modify storage game:storage _arguments.Y set value 0 
+execute store result storage game:storage _arguments.Y int 1 run random value 1..2
+execute store result storage game:storage _arguments.scale float 0.001 run random value 800..1000
 execute if data storage game:storage _arguments{Y: 1} run data modify storage game:storage _arguments.Y set value -90 
-execute if data storage game:storage _arguments{Y: 1} run data modify storage game:storage _arguments.Y set value 90
+execute if data storage game:storage _arguments{Y: 2} run data modify storage game:storage _arguments.Y set value 90
 execute as @n[tag=_game.ItemSpawner.ItemDisplay, predicate=game:id/items] run function game:items/spawner/random_rot_macro with storage game:storage _arguments
 
 # // Spawn Common/Rare/Submarine Parts
 data modify storage game:storage _arguments.name set from entity @s data.name
-execute as @n[tag=_game.ItemSpawner.ItemDisplay,predicate=game:id/items] at @s if data storage game:storage _arguments{name: "Game:SubmarinePartSpawner"} run return run function game:items/spawner/spawn_submarine_parts/main
+execute as @n[tag=_game.ItemSpawner.ItemDisplay,predicate=game:id/items] at @s if data storage game:storage _arguments{name: "Game:SubmarinePartSpawner"} run return run function game:items/spawner/submarine_parts/main
 execute as @n[tag=_game.ItemSpawner.ItemDisplay,predicate=game:id/items] at @s if data storage game:storage _arguments{name: "Game:RareItemSpawner"} run return run function game:items/spawner/rare_item
 execute as @n[tag=_game.ItemSpawner.ItemDisplay,predicate=game:id/items] at @s if data storage game:storage _arguments{name: "Game:CommonItemSpawner"} run return run function game:items/spawner/common_item

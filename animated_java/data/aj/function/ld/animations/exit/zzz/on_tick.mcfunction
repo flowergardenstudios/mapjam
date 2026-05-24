@@ -5,5 +5,5 @@ execute if score @s aj.tween_duration matches 0 on passengers run data modify en
 data remove storage animated_java:temp args
 execute store result storage animated_java:temp args.frame int 1 run scoreboard players get @s aj.exit.frame
 function aj:ld/animations/exit/zzz/apply_frame with storage animated_java:temp args
-execute if score @s aj.exit.frame matches 365.. run return run function aj:ld/animations/exit/pause
+execute if score @s aj.exit.frame matches 265.. run return run function aj:ld/animations/exit/pause
 scoreboard players add @s aj.exit.frame 1

@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "show_notification": false,
+  "ingredients": [
+    "minecraft:player_head",
+    "minecraft:player_head",
+    "minecraft:stick",
+    "minecraft:stick",
+    "minecraft:netherite_scrap"
+  ],
+  "result": {
+    "id": "dirt",
+    "components": {
+      "minecraft:item_model": "mapjam:submarine",
+      "minecraft:item_name": {
+        "text": "ZB-2079",
+        "color": "yellow",
+        "bold": true
+      },
+      "minecraft:lore": [
+        {
+          "text": "Escape this place for Good.",
+          "color": "gray"
+        }
+      ],
+      "minecraft:custom_data": {
+        "submarine": true
+      }
+    }
+  }
+}

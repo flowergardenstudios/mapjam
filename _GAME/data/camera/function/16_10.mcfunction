@@ -1,0 +1,1 @@
+item replace entity @s armor.head with dirt[equippable={slot:"head", camera_overlay:"misc/1610"}]

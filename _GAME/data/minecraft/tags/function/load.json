@@ -1,5 +1,6 @@
 {
      "values": [
-          "game:global/load"
+          "game:global/load",
+          "game:doors/load"
      ]
 }
